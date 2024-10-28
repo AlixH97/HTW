@@ -1,6 +1,6 @@
 #> Mr. & Ms. DA Bootcamp Sep 2024:
 # Packages 
-plotly==5.24.1  
+#plotly==5.24.1  
 import pandas as pd 
 import numpy as np 
 import streamlit as st 
