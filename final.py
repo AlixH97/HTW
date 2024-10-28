@@ -1,6 +1,6 @@
 #> Mr. & Ms. DA Bootcamp Sep 2024:
 # Packages 
-pip install plotly
+#pip install plotly
 import pandas as pd 
 import numpy as np 
 import streamlit as st 
