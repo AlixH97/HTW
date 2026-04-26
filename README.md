@@ -2,7 +2,7 @@
 
 An interactive data visualization dashboard built with **Python** and **Streamlit** for exploring global energy production trends by country over time.
 
-🌐 **Live App:** [View on Streamlit](https://cykdiehpb4k2jglb2b3kur.streamlit.app/)
+🌐 **Live App:** [View on Streamlit](https://chdqof8bnnqcvz6p2eqdgv.streamlit.app/)
 
 ---
 
