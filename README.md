@@ -1,40 +1,110 @@
 # 🔋 Energy Production Dashboard
 
-An interactive Streamlit dashboard for exploring energy production trends by country over time.
+An interactive data visualization dashboard built with **Python** and **Streamlit** for exploring global energy production trends by country over time.
 
-## 🚀 Live App
-[View on Streamlit](https://cykdiehpb4k2jglb2b3kur.streamlit.app/)
+🌐 **Live App:** [View on Streamlit](https://cykdiehpb4k2jglb2b3kur.streamlit.app/)
+
+---
 
 ## 📊 Features
-- Filter by country using the sidebar
-- Time series charts for: Population, Hydro, Nuclear, Renewable, Solar, and Wind energy
 
-## 📁 Data
-Data sourced from [BP Statistical Review of World Energy] (or whatever your source is).
-Columns include: `hydro_ej`, `nuclear_ej`, `ren_power_ej`, `solar_ej`, `wind_ej` (all in Exajoules).
+- **Country selector** — filter all charts by any country in the dataset using the interactive sidebar
+- **6 time series charts** covering:
+  - 👥 Population over time
+  - 🌊 Hydro energy production (Exajoules)
+  - ⚛️ Nuclear energy production (Exajoules)
+  - ♻️ Renewable energy production (Exajoules)
+  - ☀️ Solar energy production (Exajoules)
+  - 🌬️ Wind energy production (Exajoules)
+- **Interactive Plotly charts** with hover tooltips, range sliders, and latest value annotations
+- **Dark-themed UI** powered by Altair and Streamlit
 
-## ⚙️ Setup
+---
+
+## 🗂️ Project Structure
+
+```
+HTW/
+├── app.py                # Main Streamlit application
+├── Panel format.csv      # Energy dataset (panel format, by country & year)
+├── Energy.jpg            # Main banner image
+├── Energy1.jpeg          # Sidebar image
+├── requirements.txt      # Python dependencies
+└── README.md
+```
+
+---
+
+## ⚙️ Run Locally
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/AlixH97/HTW.git
+cd HTW
+```
+
+**2. Install dependencies**
 ```bash
 pip install -r requirements.txt
-streamlit run final.py
 ```
 
-**Priority 2 — Fix the deprecated Streamlit warning** by replacing both instances of `use_column_width=True` with `use_container_width=True` in `final.py`.
-
-**Priority 3 — Add a repo description on GitHub** — click the gear icon on the repo page and add something like: *"Interactive Streamlit dashboard for country-level energy production analysis"*. Also add topics like `streamlit`, `python`, `data-visualization`, `energy`.
-
-**Priority 4 — Add a docstring to `create_chart()`**:
-```python
-def create_chart(data, y, title, yaxis_title):
-    """
-    Renders a Plotly line chart in Streamlit.
-    
-    Args:
-        data (DataFrame): Filtered country data
-        y (str): Column name to plot on y-axis
-        title (str): Chart title
-        yaxis_title (str): Y-axis label
-    """
+**3. Launch the app**
+```bash
+streamlit run app.py
 ```
 
+The app will open in your browser at `http://localhost:8501`.
 
+---
+
+## 📦 Dependencies
+
+| Package | Version | Purpose |
+|---|---|---|
+| streamlit | latest | Web app framework |
+| pandas | latest | Data manipulation |
+| numpy | latest | Numerical operations |
+| plotly | 5.24.1 | Interactive charts |
+| Pillow | latest | Image handling |
+| altair | latest | Theming |
+
+---
+
+## 📁 Dataset
+
+The dataset (`Panel format.csv`) is structured in panel format with one row per country per year. Key columns:
+
+| Column | Description |
+|---|---|
+| `Country` | Country name |
+| `Year` | Year of observation |
+| `pop` | Population |
+| `hydro_ej` | Hydro energy production (Exajoules) |
+| `nuclear_ej` | Nuclear energy production (Exajoules) |
+| `ren_power_ej` | Renewable energy production (Exajoules) |
+| `solar_ej` | Solar energy production (Exajoules) |
+| `wind_ej` | Wind energy production (Exajoules) |
+
+> Data source: BP Statistical Review of World Energy
+
+---
+
+## 🛠️ Built With
+
+- [Streamlit](https://streamlit.io/) — dashboard framework
+- [Plotly](https://plotly.com/python/) — interactive visualizations
+- [Pandas](https://pandas.pydata.org/) — data processing
+- [Altair](https://altair-viz.github.io/) — theming
+
+---
+
+## 👤 Author
+
+**Alix H** — Data Analytics Student @ HTW Berlin  
+Built as part of the Mr. & Ms. DA Bootcamp (Sep 2024)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
